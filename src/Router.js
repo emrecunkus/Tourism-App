@@ -6,6 +6,7 @@ import Login from './Login';
 import Forget from './Forget';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { color } from 'react-native-elements/dist/helpers';
+import HomePage from './HomePage';
 
 
 const { width, height } = Dimensions.get("window")
@@ -43,7 +44,7 @@ const RouterComponent = () => {
                     <Scene key="loginScreen" component={Login} hideNavBar={true} />
                     <Scene key="registerScreen" component={Register} hideNavBar={true} />
                     <Scene key="forgetPassword"  titleStyle={{color:"transparent"}}  component={Forget} leftButton={forgetPasswordNavBar} navTransparent hideNavBar={false} />
-
+                    <Scene key="homepage" component={HomePage} hideNavBar={true} />
 
 
 

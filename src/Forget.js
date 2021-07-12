@@ -11,7 +11,7 @@ import { italic } from 'chalk';
 const { width, height } = Dimensions.get("window")
 
 
-
+const image = { uri: "https://i.pinimg.com/originals/3f/3a/47/3f3a47c28dbc99a8fe11c22f2ee43311.jpg" };
 class Forget extends Component {
 
 
@@ -31,7 +31,10 @@ class Forget extends Component {
         const { inputStyle } = styles;
         return (
 
-            <View>
+            <View style={{ flex: 1 }}>
+
+
+            <ImageBackground source={image} resizeMode="cover" style={styles.image}>
                 <Text style={{
                     marginTop: height * 0.2,
                     marginLeft: width * 0.05, fontSize: 18
@@ -45,9 +48,9 @@ Password
                 }}>
                     Select which contact details should we use to reset your password
                 </Text>
-                <View style={{ ...styles.mainView, flexDirection: 'row' ,alignItems:"center" }}>
+                <View style={{ ...styles.mainView, flexDirection: 'row', alignItems: "center" }}>
 
-                    <Icon 
+                    <Icon
                         name='mobile'
                         type='ion-icon'
                         color='#517fa4'
@@ -65,7 +68,7 @@ Password
 
                 </View>
 
-                <View style={{ ...styles.mainView, flexDirection: 'row', alignItems:"center" }}>
+                <View style={{ ...styles.mainView, flexDirection: 'row', alignItems: "center" }}>
 
                     <Icon
                         name='envelope'
@@ -73,33 +76,33 @@ Password
                         color='#517fa4'
                         size={22}
                     />
-                    <TextInput 
+                    <TextInput
                         placeholder="Password"
                         placeholderTextColor="black"
                         style={inputStyle}
                         value={this.props.email}
                         onChangeText={null}
-                        
+
                     />
 
 
 
                 </View>
-                 
-                <View style={{ margin: 10, marginRight: 25, marginLeft: 25, borderRadius: 10 , marginTop:15}}>
-                        <Button 
-                            title="SEND"
-                            color="black"
-                            accessibilityLabel="Tap to Decrypt Data"
-                            onPress={() => {
-                                Alert.alert('You tapped the Decrypt button!');
-                            }}
-                        />
-                    </View>
+
+                <View style={{ margin: 10, marginRight: 25, marginLeft: 25, borderRadius: 10, marginTop: 15 }}>
+                    <Button
+                        title="SEND"
+                        color="black"
+                        accessibilityLabel="Tap to Decrypt Data"
+                        onPress={() => {
+                            Alert.alert('You tapped the Decrypt button!');
+                        }}
+                    />
+                </View>
 
 
 
-
+                </ImageBackground>
             </View>
         );
     }
@@ -119,21 +122,21 @@ const styles = {
     },
     mainView: {
         borderWidth: 1,
-    borderRadius: 5,
-    borderColor: '#ddd',
-    borderBottomWidth: 2,
-    //backgroundColor: '#fff',
-    height: height * 0.08,
-    justifyContent: 'flex-start',
-    width: width * 0.9,
-    paddingLeft:width*0.03,
+        borderRadius: 5,
+        borderColor: '#ddd',
+        borderBottomWidth: 2,
+        //backgroundColor: '#fff',
+        height: height * 0.08,
+        justifyContent: 'flex-start',
+        width: width * 0.9,
+        paddingLeft: width * 0.03,
 
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    //elevation: 1,
-    marginLeft: 25,
-    marginRight: 25,
-    marginTop: 13,
+        shadowOpacity: 0.1,
+        shadowRadius: 5,
+        //elevation: 1,
+        marginLeft: 25,
+        marginRight: 25,
+        marginTop: 13,
 
     },
     mainView2: {

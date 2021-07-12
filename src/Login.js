@@ -75,7 +75,7 @@ class Login extends Component {
               color="black"
               accessibilityLabel="Tap to Decrypt Data"
               onPress={() => {
-                Alert.alert('You tapped the Decrypt button!');
+               Actions.push("homepage");
               }}
             />
           </View>
