@@ -5,13 +5,14 @@ import Register from './Register';
 import Login from './Login';
 import Forget from './Forget';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { color } from 'react-native-elements/dist/helpers';
 
 
 const { width, height } = Dimensions.get("window")
 const forgetPasswordNavBar = () => {
     return (
 
-        <View style={{ width: width, height: height * 0.08, justifyContent: "center", alignItems: "flex-start" }}>
+        <View style={{ width: width, height: height * 0.08, justifyContent: "center", alignItems: "flex-start" , }}>
             <TouchableOpacity onPress={() =>
                 Actions.pop()}>
                 <Icon
@@ -41,7 +42,7 @@ const RouterComponent = () => {
 
                     <Scene key="loginScreen" component={Login} hideNavBar={true} />
                     <Scene key="registerScreen" component={Register} hideNavBar={true} />
-                    <Scene key="forgetPassword"  component={Forget} leftButton={forgetPasswordNavBar} navTransparent hideNavBar={false} />
+                    <Scene key="forgetPassword"  titleStyle={{color:"transparent"}}  component={Forget} leftButton={forgetPasswordNavBar} navTransparent hideNavBar={false} />
 
 
 
