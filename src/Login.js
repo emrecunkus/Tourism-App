@@ -65,7 +65,7 @@ class Login extends Component {
           </View>
 
 
-          <TouchableOpacity onPress={() => Alert.alert("you forgot the password?")}>
+          <TouchableOpacity onPress={() => Actions.push("forgetPassword")}>
             <Text style={styles.pStyle}>FORGOT PASSWORD?</Text>
           </TouchableOpacity>
 
