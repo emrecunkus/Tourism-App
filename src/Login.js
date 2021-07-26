@@ -75,7 +75,7 @@ class Login extends Component {
               color="black"
               accessibilityLabel="Tap to Decrypt Data"
               onPress={() => {
-               Actions.push("homepage");
+               Actions.main({type: "replace"});
               }}
             />
           </View>
@@ -98,7 +98,7 @@ class Login extends Component {
                 <Icon.Button
                   name="facebook"
                   backgroundColor="#3b5998"
-                  onPress={() => alert('Login with Facebook')}>
+                  onPress={() => Actions.push("deneme")}>
                   Facebook
                 </Icon.Button>
               </View>
