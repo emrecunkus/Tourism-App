@@ -3,6 +3,7 @@ import { TextInput, View, Text, StyleSheet,ImageBackground, Image, Button, Alert
 import { Icon } from 'react-native-elements';
 import 'react-native-gesture-handler';
 import CheckBox from '@react-native-community/checkbox';
+import CheckboxList from 'rn-checkbox-list';
 
 import IGStoryCircle from "react-native-instagram-story-circle";
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage,CardSection } from 'react-native-cards';
@@ -14,7 +15,9 @@ import { SearchBar } from 'react-native-elements';
 import { color } from 'react-native-elements/dist/helpers';
 import TripDetail from './components/TripDetail';
 const { width, height } = Dimensions.get("window")
+data = [{ id: 1, name: 'Green Book' }, { id: 2, name: 'Bohemian Rhapsody' }];
 class CountryDetail extends Component { 
+
     state = {
         search: '',
         page: "HomeScreen",
@@ -85,9 +88,15 @@ class CountryDetail extends Component {
              
          
         
-                <CheckBox
-         // her eit will be changed
-        />
+                <CheckboxList
+  headerName="Movies"
+  theme="red"
+  listItems={data}
+  onChange={({ ids, items }) => console.log('My updated list :: ', ids)}
+  listItemStyle={{ borderBottomColor: '#eee', borderBottomWidth: 1 }}
+  checkboxProp={{ boxType: 'square' }} // iOS (supported from v0.3.0)
+  onLoading={() => <LoaderComponent />}
+/>
        
         </ScrollView>
         
