@@ -7,8 +7,14 @@ import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 
 const { width, height } = Dimensions.get("window")
 import { Tabs ,Scene,IconComponent} from 'react-native-router-flux';
 import { Actions } from 'react-native-router-flux';
+import { Appbar } from 'react-native-paper';import { Drawer } from 'react-native-paper';
+import TourismStory from './components/TourismStory';
+import TrendingDestination from './components/TrendingDestination';
+import SpecialOffer from './components/SpecialOffer';
 const image = { uri: "https://images.unsplash.com/reserve/bR4PBR2TRH2qEkB5DChN_IMG_5071.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&w=1000&q=800" };
+
 class HomePage extends Component {
+ 
     state = {
         search: '',
     };
@@ -24,6 +30,9 @@ class HomePage extends Component {
         return (
 
             <View style={{ flex: 1 }}> 
+            <ScrollView>
+
+           
              <ImageBackground source={image} resizeMode="cover" style={styles.image}>
 
                 <Text style={{
@@ -73,35 +82,17 @@ class HomePage extends Component {
                 <Text style = {{fontSize:16,  fontWeight: 'bold', marginLeft: width*0.05, color: "white"}}>THEMES </Text>
 <View style={styles.root}>
 <ScrollView horizontal = {true}>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
+<TourismStory/>
 
-<View>
-  <TouchableOpacity> 
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:17 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-  </TouchableOpacity>
-</View>
-<View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:17 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold' ,color:"white"}}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold' ,color:"white"}}> HoneyMoon</Text>
-</View><View>
-  <Image source={Image_Http_URL} style={styles.circileImage}/>
-  <Text style = {{ textAlign :"center", justifyContent :"center",paddingLeft:10 ,fontWeight: 'bold',color:"white" }}> HoneyMoon</Text>
-</View>
+
+
     
       </ScrollView>        
 
@@ -118,130 +109,51 @@ class HomePage extends Component {
 </TouchableOpacity>
 <ScrollView  horizontal  = {true}>
 
+          <View style = {{paddingLeft:12}}>
+             <TrendingDestination />
+          </View>
+        
+         <TrendingDestination/>
+         <TrendingDestination/>
+         <TrendingDestination/>
+         <TrendingDestination/>
+         <TrendingDestination/>
 
-          <TouchableOpacity>
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:25, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://images.unsplash.com/photo-1620127682229-33388276e540?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VtbWVyJTIwYmVhY2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
-        </TouchableOpacity>
+        
 
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:10, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/beach_safety_covid_19_other/1800x1200_beach_safety_covid_19_other.jpg',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
-
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:10, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://www.bizevdeyokuz.com/wp-content/uploads/before-sunset-beach-club-alacati.jpg',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:10, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://i.guim.co.uk/img/media/e257becfec477105123f06f96db4529966b4035c/0_391_6048_3628/master/6048.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=6a3a587e64662d409ef25b3215fb5ac0',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:10, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://images.unsplash.com/photo-1620127682229-33388276e540?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VtbWVyJTIwYmVhY2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
-        <View style={{ backgroundColor: "#eee", borderRadius: 10, overflow: "hidden",marginRight:10,marginLeft:10, marginBottom:10}}>
-          <View>
-            <Image
-              source={{
-                uri: 'https://images.unsplash.com/photo-1620127682229-33388276e540?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VtbWVyJTIwYmVhY2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80',
-            }}
-              style={{
-                height: 130,
-                width: 130
-              }}
-            />
-          </View>
-          <View style={{ padding: 7, width: 130 }}>
-            <Text>Title</Text>
-            <Text style={{ color: "#777", paddingTop: 1 }}>
-              Description 
-            </Text>
-          </View>
-        </View>
+        
+      
+        
+       
 
         </ScrollView>
+
+
                 </View>
+                <Text style = {{fontSize:15, marginLeft: width*0.05, marginTop: height*0.02, color:"white"}} > SPECIAL</Text>
+<TouchableOpacity onPress={() => Actions.push("destination")}>
+  <Text style = {{fontSize:16, marginLeft: width*0.04, fontWeight: 'bold', marginBottom: height*0.01, color:"white"}}>  OFFERS  </Text>
+</TouchableOpacity>
+
+<ScrollView horizontal = {true}>
+    <View style = {{ paddingLeft:12}}>
+    <SpecialOffer link = 'https://upload.wikimedia.org/wikipedia/commons/3/3c/TDL_Cinderella_Castle_New_Color.jpg' title = 'Disney' subtitle= 'Come visit us'/>
+    </View>
+  
+  <SpecialOffer link = 'https://i.pinimg.com/originals/82/74/e4/8274e4c240f66ccbd53068d0e14cfd1b.jpg' title = 'Pamukkale' subtitle= 'Beauty of Denizli'/>
+  <SpecialOffer link = 'http://pinocchiotourism.com/site_document/urun_img/V3IVZ4ODG_resim_17_10_2017_14_b.jpg' title = 'Kapodakya' subtitle= 'Prepare for flights'/>
+  <SpecialOffer link = 'https://upload.wikimedia.org/wikipedia/commons/3/3c/TDL_Cinderella_Castle_New_Color.jpg' title = 'Disney' subtitle= 'Come visit us'/>
+  <SpecialOffer link = 'https://i.pinimg.com/originals/82/74/e4/8274e4c240f66ccbd53068d0e14cfd1b.jpg' title = 'Pamukkale' subtitle= 'Beauty of Denizli'/>
+  <SpecialOffer link = 'http://pinocchiotourism.com/site_document/urun_img/V3IVZ4ODG_resim_17_10_2017_14_b.jpg' title = 'Kapodakya' subtitle= 'Prepare for flights'/>
+  
+ 
+
+       
+       
+</ScrollView>
 
               </ImageBackground>
+              </ScrollView>
             </View>
         );
     }
