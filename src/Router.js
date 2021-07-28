@@ -40,7 +40,7 @@ const destNavBar = () => {
     return (
 
         <View style={{ width: width, height: height * 0.08, justifyContent: "center", alignItems: "flex-start", }}>
-            <TouchableOpacity onPress={() =>
+            <TouchableOpacity  onPress={() =>
                 Actions.pop()}>
                 <Icon
                     name='chevron-left'
