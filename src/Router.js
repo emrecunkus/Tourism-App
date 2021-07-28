@@ -87,7 +87,11 @@ const RouterComponent = () => {
                
                     <Scene key="country_detail" titleStyle={{ color: "transparent" }} component={CountryDetail} hideNavBar={true} leftButton={forgetPasswordNavBar} navTransparent hideNavBar={false} />
 
-
+                        <Scene
+                         // add a new one here filtering page
+                        />
+                            
+                        
 
 
 
