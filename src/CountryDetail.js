@@ -276,13 +276,174 @@ class CountryDetail extends Component {
 
             </View>
 
-            <ScrollView>
+            <View style = {{ flex: 0.7}}>
+            <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+
+           
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+
+           
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+
+           
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+
+           
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+             
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+             
+             <View style = {{ flexDirection :"row", flex: 0.1,marginBottom:-20, marginTop: -10}}>
+              
+              <CheckBox
+              uncheckedColor = "green"
+              checkedColor = "green"
+
+           
+          
+           checked={this.state.checked4}
+           onPress={() => this.setState({checked4: !this.state.checked4})}
+         />
+           <Text style = {{ marginTop:height*0.021,marginRight: width*0.05,marginLeft:width*0.02}}>Relevancee </Text>
+           
+             </View>
+             <Divider orientation="horizontal" />
+             
+             
+
+           
+
+
+
+
+             
+
+
+
+            </View>
+
+            <View style = {{ marginBottom: 100,backgroundColor: "#E8E0D9", height: height*0.07, width: width, flexDirection: "row" , justifyContent: "space-between"}}>
+              
+
+              <Text style = {{marginLeft: width*0.03, fontWeight:"bold",marginTop: height*0.01}}> Budget(per person) </Text>
+              <TouchableOpacity>
+
+                <Text style = {{marginRight: width*0.03, fontWeight:"bold",marginTop: height*0.01}}> CLEAR </Text>
+              </TouchableOpacity>
+
               
 
 
-            </ScrollView>
+            </View>
+
 
           
+              
+
+
+            
+              
+
+           
               
               
               
@@ -349,12 +510,14 @@ modal: {
    
    },
    modal2: {  
-    flex: 1,  
+  flex:1,
     flexDirection: 'column',  
     
     
     width: "100%",  
     backgroundColor:"white" ,
+    
+ 
     
       
      
